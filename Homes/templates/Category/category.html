@@ -1,0 +1,15 @@
+{% extends "Base.html" %}
+
+
+{% block content %}
+{% for product in category.job_set.all %}
+    {% include 'Job_cart.html' with obj=product %}
+{% endfor %}
+
+
+
+
+
+  
+{%endblock%}
+

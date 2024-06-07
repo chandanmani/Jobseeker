@@ -1,0 +1,11 @@
+{% extends "Base.html" %}
+
+
+{% block content %}
+
+{% for data in jobs %}
+
+{% include 'Job_cart.html' with obj=data %}
+ {%endfor%}
+
+{%endblock%}

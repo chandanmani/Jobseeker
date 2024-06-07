@@ -1,0 +1,22 @@
+{% extends 'RegisterBase.html' %}
+
+{% block content %}
+<div class="container p-5">
+    {% if message %}
+    <h1 style="background-color: blanchedalmond;">{{ message }}</h1>
+    {% endif %}
+    <form method="post" action="">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form-group">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+            {% if field.help_text %}
+            <small class="form-text text-muted">{{ field.help_text }}</small>
+            {% endif %}
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
+{% endblock %}

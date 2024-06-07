@@ -1,0 +1,11 @@
+{%extends "RegisterBase.html" %}
+{%block content%}
+<form action="" method="post">
+    {%csrf_token%}
+
+
+
+    <h1>Are you Sure You Want to delete</h1>
+<button type="submit" class="btn btn-primary btn-lg rounded " style="margin:10px 200px ;">Submit</button>
+</form>
+{% endblock %}

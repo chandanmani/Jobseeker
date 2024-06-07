@@ -1,0 +1,30 @@
+{% load static %}
+<div class="container">
+   
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+            <!-- single-job-content -->
+            <div class="single-job-items mb-30" >
+                <div class="job-items">
+                    <div class="company-img">
+                        <a href="{% url 'detail' pk=obj.id %}"><img src="{{obj.Company_logo.url}}" alt="" width="100px" height="85px"></a>
+                    </div>
+                    <div class="job-tittle">
+                        <a href=""><h4>{{obj.Role}}</h4></a>
+                        <ul>
+                            <li>{{obj.Company_name}}</li>
+                            <li><i class="fas fa-map-marker-alt"></i>{{obj.Location}}</li>
+                            <li>CTC-{{obj.To_Salary}}-{{obj.From_Salary}}</li>
+                        </ul>-
+                    </div>
+                </div>
+                <div class="items-link f-right">
+                    <a href="job_details.html">{{obj.Job_type}}</a>
+                    
+                </div>
+            </div>
+           
+            
+</div>
+</section>
+         

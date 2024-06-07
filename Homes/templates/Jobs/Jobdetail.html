@@ -1,0 +1,40 @@
+{% extends "RegisterBase.html" %}
+
+{% block content %}
+<div class="container">
+    <form action="{% url 'Set' object.id %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="card border rounded shadow my-5">
+            <div class="card-header d-flex align-items-center">
+                <img src="{{ object.Company_logo.url }}" alt="{{ object.Company_name }} Logo" class="mr-3" width="150px" height="115px">
+                <h3 class="card-title" style="padding-left: 105px;">{{ object.Company_name }}</h3>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{ object.Role }}</h4>
+                <p class="card-text">Salary: {{ object.From_Salary }} LPA To {{ object.To_Salary }} LPA</p>
+                <p class="card-text">Location: {{ object.Location }}</p>
+                <p class="card-text">Job Type: {{ object.Job_type }}</p>
+            </div>
+            <h3 style="padding-left: 20px;"> Job Description:</h3>
+            <div class="card-body">
+                <p class="card-text">{{ object.Job_description }}</p>
+                
+                <h4 class="card-subtitle mb-2">Company Details</h4>
+                <div class="d-flex flex-row align-items-center">
+                    <div>
+                        <p><img src="{{ object.Company_logo.url }}" alt="{{ object.Company_name }} Logo" class="mr-3" width="200px" height="125px"></p>
+                        <p class="card-text">{{ object.Company_description }}</p>
+                        
+                        
+                    </div>
+                </div>
+
+                
+  
+                <button type="submit" class="btn btn-primary btn-lg active ml-6" role="button" aria-pressed="true">Submit</button>
+            </div>
+            
+        </div>
+    </form>
+</div>
+{% endblock %}

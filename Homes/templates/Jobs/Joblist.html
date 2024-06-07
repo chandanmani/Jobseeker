@@ -1,0 +1,40 @@
+{% extends "Base.html" %}
+
+
+{% block content %}
+
+{% for data in object_list %}
+
+{% load static %}
+<div class="container">
+   
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+            <!-- single-job-content -->
+            <div class="single-job-items mb-30" >
+                <div class="job-items">
+                    <div class="company-img">
+                        <a href="{% url 'detail' pk=data.id %}"><img src="{{data.Company_logo.url}}" alt="" width="100px" height="85px"></a>
+                    </div>
+                    <div class="job-tittle">
+                        <a href=""><h4>{{data.Role}}</h4></a>
+                        <ul>
+                            <li>{{data.Company_name}}</li>
+                            <li><i class="fas fa-map-marker-alt"></i>{{data.Location}}</li>
+                            <li>CTC-{{data.To_Salary}}-{{data.From_Salary}} Lac</li>
+                        </ul>-
+                    </div>
+                </div>
+                <div class="items-link f-right">
+                    <a href="{% url 'detail' pk=data.id %}">{{data.Job_type}}</a>
+                    
+                </div>
+            </div>
+           
+            
+</div>
+</section>
+ {%endfor%}
+
+{%endblock%}
+
