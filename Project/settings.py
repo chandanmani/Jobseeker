@@ -148,4 +148,4 @@ EMAIL_HOST = 'smtp.gmail.com'  # Your SMTP host
 EMAIL_PORT = 587  # Or the port your SMTP server uses
 EMAIL_USE_TLS = True  # Or False if your SMTP server doesn't use TLS
 EMAIL_HOST_USER ='Chandanmani118@gmail.com'
-EMAIL_HOST_PASSWORD ='rdqg ajpa uzje kdqa'
+EMAIL_HOST_PASSWORD ='rdqg ajpa uzje kdqaa'
